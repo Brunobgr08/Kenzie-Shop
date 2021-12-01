@@ -4,9 +4,14 @@ import ProductsGrid from "../../components/ProductsList";
 
 import { FaSignInAlt, FaShoppingCart } from "react-icons/fa";
 import { useHistory } from "react-router";
+import { useSelector } from "react-redux";
 
 const Home = () => {
   const history = useHistory();
+
+  const { cart } = useSelector((state) => state);
+
+  const qtdProducts = cart.reduce((acc, item) => acc + 1, 0);
 
   return (
     <ContainerBody>
@@ -15,6 +20,7 @@ const Home = () => {
         <ContBtn>
           <BtnHeader onClick={() => history.push("/cart")}>
             <FaShoppingCart />
+            <h5>{qtdProducts}</h5>
             <p>Carrinho</p>
           </BtnHeader>
           <BtnHeader onClick={() => history.push("/login")}>

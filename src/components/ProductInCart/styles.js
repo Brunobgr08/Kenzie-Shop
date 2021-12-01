@@ -40,7 +40,7 @@ export const ProductContainer = styled.div`
 `;
 
 export const ContInfo = styled.div`
-  width: 65%;
+  width: 69%;
   height: 100%;
 
   display: flex;
@@ -49,10 +49,11 @@ export const ContInfo = styled.div`
 
 export const ContText = styled.div`
   width: 100%;
-  height: 80%;
+  height: 70%;
 
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   align-items: flex-end;
 
   @media (min-width: 768px) {
@@ -62,7 +63,7 @@ export const ContText = styled.div`
 `;
 
 export const ContTextDiv = styled.div`
-  width: 70%;
+  width: 60%;
   height: 100%;
 
   display: flex;
@@ -71,20 +72,22 @@ export const ContTextDiv = styled.div`
 
   @media (min-width: 768px) {
     justify-content: flex-start;
+    width: 60%;
   }
 `;
 
 export const ContBtn = styled.div`
   width: 100%;
   height: 30%;
-  padding-left: 75%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  padding-left: 80%;
 
   @media (min-width: 768px) {
+    padding-bottom: 30px;
     height: 50%;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 80%;
   }
 `;
 
@@ -92,16 +95,16 @@ export const ProductTittle = styled.h3`
   width: 100%;
 
   text-align: left;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--black-olive);
 
   @media (min-width: 768px) {
     font-size: 1.3rem;
   }
 `;
+
 export const ProductDescription = styled.p`
   width: 100%;
-  /* height: 90px; */
   padding-right: 30px;
   text-align: justify;
   font-size: 0.6rem;
@@ -111,17 +114,26 @@ export const ProductDescription = styled.p`
     font-size: 0.9rem;
   }
 `;
+
 export const ProductPrice = styled.p`
   width: 30%;
   padding-bottom: 20px;
 
   text-align: left;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--black-olive);
 
   @media (min-width: 768px) {
-    padding-left: 30px;
-    font-size: 1.2rem;
+    width: 40%;
+    padding-left: 5px;
+    font-size: 1rem;
+    padding-bottom: 0px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 40%;
+    padding-left: 10px;
+    font-size: 1.3rem;
     padding-bottom: 0px;
   }
 `;

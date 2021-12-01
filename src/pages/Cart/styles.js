@@ -86,4 +86,9 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 `;

@@ -7,6 +7,7 @@ import { remProductThunk } from "../../store/modules/cart/thunks";
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
 
 import { useDispatch } from "react-redux";
+import MediaQuery from "react-responsive";
 
 const ProductInCart = ({
   product: { id, name, price, image, description },
@@ -19,6 +20,11 @@ const ProductInCart = ({
     dispatch(remProductThunk({ id, name, price, image, description }));
   };
 
+  const priceFormat = price.toLocaleString("pt-br", {
+    style: "currency",
+    currency: "BRL",
+  });
+
   return (
     <ProductContainer>
       <figure>
@@ -26,16 +32,23 @@ const ProductInCart = ({
       </figure>
       <ContInfo>
         <ContBtn>
-          <Button btn="gray" onClick={handleClick}>
-            <MdOutlineRemoveShoppingCart /> Remover do carrinho
-          </Button>
+          <MediaQuery maxWidth={1439}>
+            <Button btn="gray" fontSize={"1rem"} onClick={handleClick}>
+              <MdOutlineRemoveShoppingCart />
+            </Button>
+          </MediaQuery>
+          <MediaQuery minWidth={1440}>
+            <Button btn="gray" fontSize={"90%"} onClick={handleClick}>
+              <MdOutlineRemoveShoppingCart /> Remover do carrinho
+            </Button>
+          </MediaQuery>
         </ContBtn>
         <ContText>
           <ContTextDiv>
             <ProductTittle>{name}</ProductTittle>
             <ProductDescription>{newDescription}</ProductDescription>
           </ContTextDiv>
-          <ProductPrice>{`R$ ${price}`}</ProductPrice>
+          <ProductPrice>{`${priceFormat}`}</ProductPrice>
         </ContText>
       </ContInfo>
     </ProductContainer>

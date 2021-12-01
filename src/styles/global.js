@@ -12,7 +12,7 @@ export default createGlobalStyle`
         --cultured: #f2f3f7ff;
         --black-olive: #363732ff;
         --taupe-gray: #8c8a93ff;
-        --blue-pigment: #38369aff;
+        --blue-pigment: #008DD5;
         --zaffre: #0208a6ff;
         --white: #FFFFFF;
         --purple: #383597;

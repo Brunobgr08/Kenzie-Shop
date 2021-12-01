@@ -10,6 +10,8 @@ export const addProductThunk = (product) => {
 
     const updateCart = [...products, product];
 
+    localStorage.setItem("@KenzieShop:cart", JSON.stringify(updateCart));
+
     dispatch(addProduct(updateCart));
   };
 };
@@ -19,6 +21,8 @@ export const remProductThunk = (product) => {
     const products = select(getState());
 
     const updateCart = products.filter((item) => item.id !== product.id);
+
+    localStorage.setItem("@KenzieShop:cart", JSON.stringify(updateCart));
 
     dispatch(removeProduct(updateCart));
   };

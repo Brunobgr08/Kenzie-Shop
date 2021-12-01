@@ -13,11 +13,12 @@ export const Btn = styled.button`
       : props.btn === "blue"
       ? `var(--cultured)`
       : `var(--taupe-gray)`};
-  height: 50px;
+  height: 100%;
   width: 100%;
   border: none;
   border-radius: 8px;
-  padding: 10px 20px;
+  padding: 0;
+  font-size: ${(props) => props.fontSize};
   font-weight: 500;
   margin: 5px 0px;
 

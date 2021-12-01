@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-const products = [
+export const products = [
   {
     name: "Moto G10",
     price: 879.0,

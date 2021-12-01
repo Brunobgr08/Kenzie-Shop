@@ -35,6 +35,20 @@ export const ProductContainer = styled.div`
     box-shadow: 6px 6px 8px -1px rgba(0, 0, 0, 0.28);
   }
 `;
+
+export const ContBtnPro = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+
+  @media (min-width: 768px) {
+  }
+`;
+
 export const ProductTittle = styled.h3`
   width: 100%;
 
@@ -42,6 +56,7 @@ export const ProductTittle = styled.h3`
   font-size: 1.3rem;
   color: var(--black-olive);
 `;
+
 export const ProductDescription = styled.p`
   width: 100%;
   height: 90px;
@@ -50,6 +65,7 @@ export const ProductDescription = styled.p`
   font-size: 0.9rem;
   color: var(--taupe-gray);
 `;
+
 export const ProductPrice = styled.p`
   width: 100%;
 

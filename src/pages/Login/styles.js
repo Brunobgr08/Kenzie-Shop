@@ -13,7 +13,7 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
-  width: 600px;
+  width: 80%;
   height: 400px;
   padding: 30px;
 
@@ -25,9 +25,11 @@ export const Form = styled.form`
   h4 {
     font-size: 2rem;
     color: var(--black-olive);
+    text-align: center;
   }
 
   p {
+    text-align: center;
     font-size: 1.5rem;
   }
 `;

@@ -5,7 +5,7 @@ import ProductInCart from "../ProductInCart";
 
 const CartGrid = () => {
   const { cart } = useSelector((state) => state);
-  console.log(cart);
+
   return (
     <Grid>
       <HeaderGrid>

@@ -13,14 +13,20 @@ export const Grid = styled.div`
   background-color: var(--white);
   -webkit-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.28);
   box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.28);
+  margin-bottom: 20px;
 
   @media (min-width: 768px) {
     width: 55%;
     height: fit-content;
-    margin: 0 100px;
+    margin: 0 30px;
     position: static;
     overflow-y: hidden;
     overflow-x: hidden;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0% 5%;
+    width: 65%;
   }
 `;
 
@@ -31,7 +37,7 @@ export const HeaderGrid = styled.div`
   align-items: center;
   width: 100%;
   height: 70px;
-  padding: 10px 20px;
+  padding: 2% 17%;
   position: sticky;
   top: 0;
   border-bottom: solid 1px var(--cultured);
@@ -42,7 +48,10 @@ export const HeaderGrid = styled.div`
   }
 
   @media (min-width: 768px) {
-    padding: 20px 90px;
     position: static;
+  }
+
+  @media (min-width: 1500px) {
+    padding-right: 23%;
   }
 `;

@@ -52,6 +52,7 @@ export const BtnHeader = styled.button`
   font-weight: 500;
   margin: 0 5px;
   font-size: 1.7rem;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -60,6 +61,32 @@ export const BtnHeader = styled.button`
 
   p {
     display: none;
+  }
+
+  h5 {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--blue-pigment);
+    color: var(--cultured);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 7px;
+    margin-left: 40px;
+
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: var(--zaffre);
+      color: var(--white);
+    }
   }
 
   &:hover {

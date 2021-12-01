@@ -12,11 +12,12 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
-  width: 400px;
+  width: 80%;
   height: 300px;
   padding: 30px;
 
   h4 {
     font-size: 1.5rem;
+    text-align: center;
   }
 `;

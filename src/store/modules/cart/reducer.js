@@ -1,4 +1,4 @@
-import { ADD_PRODUCT, REMOVE_PRODUCT } from "./actionTypes";
+import { ADD_PRODUCT, REMOVE_PRODUCT, REMOVE_ALL_PRODUCT } from "./actionTypes";
 
 const saved = localStorage.getItem("@KenzieShop:cart");
 
@@ -9,6 +9,8 @@ const cartReducer = (state = cartSale, action) => {
     case ADD_PRODUCT:
       return action.product;
     case REMOVE_PRODUCT:
+      return action.product;
+    case REMOVE_ALL_PRODUCT:
       return action.product;
 
     default:

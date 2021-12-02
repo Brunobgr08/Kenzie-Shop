@@ -13,6 +13,7 @@ export const Header = styled.header`
   border-bottom: solid 1px var(--taupe-gray);
   position: sticky;
   top: 0;
+  z-index: 1;
 
   display: flex;
   flex-direction: row;

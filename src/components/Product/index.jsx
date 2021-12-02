@@ -5,11 +5,30 @@ import { addProductThunk } from "../../store/modules/cart/thunks";
 
 import { useDispatch } from "react-redux";
 
+function generateTokenCart(n) {
+  var chars =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%¨&*?";
+  var token = "";
+  for (var i = 0; i < n; i++) {
+    token += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return token;
+}
+
 const ProductCart = ({ product: { id, name, price, image, description } }) => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(addProductThunk({ id, name, price, image, description }));
+    dispatch(
+      addProductThunk({
+        id,
+        name,
+        price,
+        image,
+        description,
+        idCart: generateTokenCart(32),
+      })
+    );
   };
 
   const priceFormat = price.toLocaleString("pt-br", {

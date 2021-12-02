@@ -1,4 +1,4 @@
-import { addProduct, removeProduct } from "./actions";
+import { addProduct, removeProduct, removeAllProduct } from "./actions";
 
 const select = (state) => {
   return state.cart;
@@ -20,10 +20,26 @@ export const remProductThunk = (product) => {
   return (dispatch, getState) => {
     const products = select(getState());
 
-    const updateCart = products.filter((item) => item.id !== product.id);
+    const updateCart = products.filter(
+      (item) => item.idCart !== product.idCart
+    );
 
     localStorage.setItem("@KenzieShop:cart", JSON.stringify(updateCart));
 
     dispatch(removeProduct(updateCart));
+  };
+};
+
+export const remAllProductThunk = () => {
+  return (dispatch, getState) => {
+    const products = select(getState());
+
+    const updateCart = products.filter((item) => item.id === 0);
+
+    console.log(updateCart);
+
+    localStorage.setItem("@KenzieShop:cart", JSON.stringify(updateCart));
+
+    dispatch(removeAllProduct(updateCart));
   };
 };

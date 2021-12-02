@@ -10,14 +10,14 @@ import { useDispatch } from "react-redux";
 import MediaQuery from "react-responsive";
 
 const ProductInCart = ({
-  product: { id, name, price, image, description },
+  product: { id, name, price, image, description, idCart },
 }) => {
   const newDescription = `${description.slice(0, 57)}...`;
 
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(remProductThunk({ id, name, price, image, description }));
+    dispatch(remProductThunk({ id, name, price, image, description, idCart }));
   };
 
   const priceFormat = price.toLocaleString("pt-br", {

@@ -1,4 +1,7 @@
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+
+import { remAllProductThunk } from "../../store/modules/cart/thunks";
 
 import {
   ContainerResume,
@@ -9,6 +12,8 @@ import {
 import Button from "../Button";
 
 const Resume = () => {
+  const dispatch = useDispatch();
+
   const { cart } = useSelector((state) => state);
 
   const qtdProducts = cart.reduce((acc, item) => acc + 1, 0);
@@ -20,9 +25,13 @@ const Resume = () => {
     currency: "BRL",
   });
 
-  const clearCart = () => {
-    localStorage.removeItem("@KenzieShop:cart");
+  const handleClick = () => {
+    dispatch(remAllProductThunk());
   };
+
+  // const clearCart = () => {
+  //   localStorage.removeItem("@KenzieShop:cart");
+  // };
 
   //Preciso definir um state para load das informações  dos produtos
   //state ajudará a tornar a limpeza visual do cart
@@ -37,7 +46,7 @@ const Resume = () => {
         <h6>{`${priceProducts}`}</h6>
       </MainResume>
       <ContBtnResume>
-        <Button btn="gray" fontSize={"90%"} onClick={clearCart}>
+        <Button btn="gray" fontSize={"90%"} onClick={handleClick}>
           Limpar o carrinho
         </Button>
         <Button btn="blue" fontSize={"90%"}>

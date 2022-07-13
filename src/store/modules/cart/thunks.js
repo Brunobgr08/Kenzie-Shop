@@ -36,8 +36,6 @@ export const remAllProductThunk = () => {
 
     const updateCart = products.filter((item) => item.id === 0);
 
-    console.log(updateCart);
-
     localStorage.setItem("@KenzieShop:cart", JSON.stringify(updateCart));
 
     dispatch(removeAllProduct(updateCart));
